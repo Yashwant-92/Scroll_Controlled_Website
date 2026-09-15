@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AAVIE — Every body is different.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+">
+  <div style="font-family: Inter, sans-serif; font-size: 13px; letter-spacing: 0.4em; color: white; margin-bottom: 24px;">AAVIE</div>
+  <div id="loader-bar-wrap" style="width: 200px; height: 1px; background: rgba(255,255,255,0.1);">
+    <div id="loader-bar" style="height: 1px; width: 0%; background: #7ec8c8; transition: width 0.1s;"></div>
+  </div>
+  <div id="loader-text" style="font-family: Inter, sans-serif; font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,0.4); margin-top: 16px;">Loading experience...</div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">AAVIE</div>
+  <div class="nav-links">
+    <a href="#" class="nav-link">How it works</a>
+    <a href="#" class="nav-link">The Supplement</a>
+    <button class="nav-btn">GET NOTIFIED</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="scroll-container">
+  <div class="video-pin">
+    <canvas id="hero-canvas"></canvas>
+    <div class="video-overlay"></div>
+
+    <!-- FRAME 01 — Hero / Brand Intro -->
+    <section class="frame frame-01" data-frame="1">
+      <div class="frame-logo">AAVIE</div>
+      <div class="frame-center hero-center">
+        <h1 class="hero-headline">
+          <span class="line line-1">Every body is different.</span>
+          <span class="line line-2">So should be your supplement.</span>
+        </h1>
+        <p class="hero-body">AAVIE builds your supplement around your body type, your cycle pattern, and your hormones.</p>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll to discover</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- FRAME 02 — AM Reveal -->
+    <section class="frame frame-02" data-frame="2">
+      <div class="frame-content am-content">
+        <span class="label-tag am-tag">AM · BODY CARE</span>
+        <h2 class="frame-headline">Start your morning right.</h2>
+        <p class="frame-body">150g natural powder formula designed for your body's morning rhythm and hormonal balance.</p>
+        <span class="small-text am-small">Natural · Ayurvedic · Women-first</span>
+      </div>
+    </section>
+
+    <!-- FRAME 03 — AM Ingredients / Benefits -->
+    <section class="frame frame-03" data-frame="3">
+      <div class="frame-content am-benefits-content">
+        <span class="section-label">WHAT AM GIVES YOU</span>
+        <div class="pills">
+          <div class="pill">
+            <div class="pill-dot am-dot"></div>
+            <div class="pill-text">
+              <div class="pill-title">Hormone Balance</div>
+              <div class="pill-subtitle">Supports your morning cortisol rhythm</div>
+            </div>
+          </div>
+          <div class="pill">
+            <div class="pill-dot am-dot"></div>
+            <div class="pill-text">
+              <div class="pill-title">Energy Support</div>
+              <div class="pill-subtitle">Natural sustained energy without crash</div>
+            </div>
+          </div>
+          <div class="pill">
+            <div class="pill-dot am-dot"></div>
+            <div class="pill-text">
+              <div class="pill-title">Gut Health</div>
+              <div class="pill-subtitle">Prebiotic blend for digestive ease</div>
+            </div>
+          </div>
+        </div>
+        <p class="fineprint">All natural. No fillers. No synthetic hormones.</p>
+      </div>
+    </section>
+
+    <!-- FRAME 04 — Day to Night Transition -->
+    <section class="frame frame-04" data-frame="4">
+      <div class="frame-center transition-center">
+        <p class="transition-quote">
+          <span class="line">As your day ends,</span>
+          <span class="line">your cycle continues.</span>
+        </p>
+        <div class="thin-line"></div>
+        <p class="transition-sub">AAVIE PM was made for this moment.</p>
+      </div>
+    </section>
+
+    <!-- FRAME 05 — PM Reveal -->
+    <section class="frame frame-05" data-frame="5">
+      <div class="frame-content pm-content">
+        <span class="label-tag pm-tag">PM · CYCLE CARE</span>
+        <h2 class="frame-headline">Your evening, restored.</h2>
+        <p class="frame-body">250g formula that works with your hormonal cycle while you rest. Designed for the phase you are in — not against it.</p>
+        <span class="small-text pm-small">Cycle-aware · Restorative · Hormone-safe</span>
+      </div>
+    </section>
+
+    <!-- FRAME 06 — PM Ingredients / Benefits -->
+    <section class="frame frame-06" data-frame="6">
+      <div class="frame-content pm-benefits-content">
+        <span class="section-label">WHAT PM GIVES YOU</span>
+        <div class="pills">
+          <div class="pill pill-pm">
+            <div class="pill-text">
+              <div class="pill-title">Cycle Support</div>
+              <div class="pill-subtitle">Phase-specific blend for hormonal ease</div>
+            </div>
+          </div>
+          <div class="pill pill-pm">
+            <div class="pill-text">
+              <div class="pill-title">Deep Sleep</div>
+              <div class="pill-subtitle">Adaptogens that prepare your body for rest</div>
+            </div>
+          </div>
+          <div class="pill pill-pm">
+            <div class="pill-text">
+              <div class="pill-title">Anti-inflammatory</div>
+              <div class="pill-subtitle">Reduces bloating and cycle discomfort</div>
+            </div>
+          </div>
+        </div>
+        <p class="fineprint">Science-backed. Women-first. Vaidya reviewed.</p>
+      </div>
+    </section>
+
+    <!-- FRAME 07 — Final CTA -->
+    <section class="frame frame-07" data-frame="7">
+      <div class="frame-center cta-center">
+        <span class="section-label cta-label">THE COMPLETE SYSTEM</span>
+        <h2 class="cta-headline">
+          <span class="line">One complete system.</span>
+          <span class="line">Built for you.</span>
+        </h2>
+        <p class="cta-body">Two formulas. Morning and evening. Designed around the female cycle.</p>
+        <div class="cta-buttons">
+          <button class="btn btn-am">Shop AM</button>
+          <button class="btn btn-pm">Shop PM</button>
+        </div>
+        <p class="trust-line">Free shipping · 30-day guarantee · Made in India</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
