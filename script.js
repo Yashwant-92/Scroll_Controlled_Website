@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 // ============================================================
 const FRAME_COUNT = 100;           // total frames you extracted
 const FRAME_PREFIX = "ezgif-frame-"; // filename prefix
-const FRAME_EXT = ".jpg";           // file extension
+const FRAME_EXT = ".png";           // file extension
 const FRAME_PATH = "assets/frames/"; // folder path
 
 // Frame text ranges — 7 sections across 0 to 1
